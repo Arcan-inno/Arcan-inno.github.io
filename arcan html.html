@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ARCAN | Engineering the Future</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#004e60",
+                        "on-secondary-container": "#636262",
+                        "secondary-fixed": "#e5e2e1",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e1e3e4",
+                        "on-surface-variant": "#434657",
+                        "inverse-primary": "#b9c3ff",
+                        "on-background": "#191c1d",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-tertiary-container": "#a1e5ff",
+                        "primary": "#0035c5",
+                        "outline-variant": "#c4c5da",
+                        "on-primary-container": "#d4d9ff",
+                        "surface-container-high": "#e7e8e9",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-container-highest": "#e1e3e4",
+                        "secondary": "#5f5e5e",
+                        "error": "#ba1a1a",
+                        "primary-container": "#0047ff",
+                        "outline": "#747688",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-dim": "#d9dadb",
+                        "primary-fixed-dim": "#b9c3ff",
+                        "inverse-surface": "#2e3132",
+                        "background": "#f8f9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#4cd6ff",
+                        "surface-tint": "#0046fa",
+                        "surface-container": "#edeeef",
+                        "tertiary-container": "#006982",
+                        "on-error": "#ffffff",
+                        "on-surface": "#191c1d",
+                        "on-tertiary-fixed": "#001f28",
+                        "surface-bright": "#f8f9fa",
+                        "tertiary-fixed": "#b7eaff",
+                        "primary-fixed": "#dde1ff",
+                        "surface": "#f8f9fa",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-primary-fixed": "#001257",
+                        "tertiary": "#004f63",
+                        "on-secondary-fixed-variant": "#474746",
+                        "secondary-container": "#e2dfde",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#0033c0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "max-width": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Montserrat"],
+                        "label-sm": ["JetBrains Mono"],
+                        "headline-xl": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .brutalist-border { border: 2px solid #191c1d; }
+        .brutalist-shadow { shadow: 4px 4px 0px 0px #191c1d; }
+        .doodle { pointer-events: none; z-index: 10; position: absolute; opacity: 0.8; stroke: #191c1d; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+        .doodle-blue { stroke: #0035c5; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary selection:text-white">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-surface/95 backdrop-blur-sm border-b-2 border-on-surface dark:border-outline-variant shadow-[4px_4px_0px_0px_rgba(25,28,29,1)]">
+<div class="font-headline-lg text-headline-lg font-black tracking-tighter text-on-surface dark:text-surface-bright">ARCAN</div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="font-body-md text-body-md text-primary dark:text-primary-fixed-dim border-b-2 border-primary pb-1 transition-all duration-150" href="#">Mission</a>
+<a class="font-body-md text-body-md text-on-surface dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim hover:-translate-y-0.5 transition-all duration-150" href="#">Team</a>
+<a class="font-body-md text-body-md text-on-surface dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed-dim hover:-translate-y-0.5 transition-all duration-150" href="#">Project Spotlight</a>
+</nav>
+<button class="bg-primary text-white border-2 border-on-background px-6 py-2 font-label-sm text-label-sm hover:-translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(25,28,29,1)] transition-all active:scale-95">
+            Get in Touch
+        </button>
+</header>
+<main class="pt-24 overflow-x-hidden">
+<!-- Hero / Mission Section -->
+<section class="relative px-margin-mobile md:px-margin-desktop py-32 max-w-max-width mx-auto flex flex-col md:flex-row items-center gap-12">
+<!-- Decorative Doodles -->
+<svg class="doodle w-32 h-32 top-10 -left-10 md:-left-20" viewbox="0 0 100 100">
+<path d="M20,50 Q40,10 60,50 T100,50"></path>
+<circle cx="20" cy="50" fill="#191c1d" r="2"></circle>
+<path d="M40,30 L45,35 M55,30 L50,35" stroke-width="2"></path>
+</svg>
+<svg class="doodle doodle-blue w-24 h-24 bottom-0 right-10" viewbox="0 0 100 100">
+<path d="M50,20 C50,20 80,40 50,80 C20,40 50,20"></path>
+<line x1="50" x2="50" y1="20" y2="10"></line>
+<line x1="50" x2="50" y1="80" y2="90"></line>
+</svg>
+<div class="flex-1 space-y-8 relative z-20">
+<div class="inline-block px-3 py-1 bg-primary text-white font-label-sm text-label-sm border-2 border-on-background">
+                    HACKOMATION 2024
+                </div>
+<h1 class="font-headline-xl text-headline-xl leading-tight text-on-background">
+                    ENGINEERING <span class="text-primary italic">SPONTANEITY</span> INTO THE FUTURE.
+                </h1>
+<p class="text-on-secondary-container max-w-xl text-lg">
+                    ARCAN is a high-octane student collective bridging the gap between raw engineering curiosity and market-ready innovation. We don't just build; we break, iterate, and evolve.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-white border-2 border-on-background px-8 py-4 font-bold text-lg hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(25,28,29,1)] transition-all">
+                        View Our Projects
+                    </button>
+<button class="bg-white text-on-background border-2 border-on-background px-8 py-4 font-bold text-lg hover:bg-primary hover:text-white transition-all">
+                        Join the Lab
+                    </button>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="relative z-20 brutalist-border bg-white shadow-[12px_12px_0px_0px_rgba(0,53,197,1)] overflow-hidden">
+<img alt="ARCAN Engineering Lab" class="w-full grayscale hover:grayscale-0 transition-all duration-500 aspect-square object-cover" data-alt="A high-tech student laboratory environment with various electronic components, circuit boards, and advanced tools neatly organized on a clean white drafting table. The scene is lit with bright, cool laboratory lighting, emphasizing a clean and professional engineering atmosphere. Electric blue accents from LED lights and wiring provide a vibrant contrast against the minimalist white workspace. The mood is focused and innovative, capturing the essence of a modern tech startup workshop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC68wRJ7Egak4Z2tpvpLuzCXvuDS-K8Sov0yOdzqpoc-gL0ulKFx4htAF8apTAfaEEhoQfurf2-h-_Xn44Lr4uYV316JPk9rhB3hEUuWMYsmm8-8V1AKbf9nLxM1hC-2EYgYHMMNURUvoFX5ApE9cIEKH0Y0DDwHVluVtmD-txkma8NiAHsS53rytWLMUkbnsuZ9lUP18SA4MoW-VTv4ccqby1tbNQ1C6NGjup30bWiXRNFJCkOw-mh9PC9C4dGSifJmyUFCLB8HJ8"/>
+</div>
+<!-- Circuit Doodle overlapping the image -->
+<svg class="doodle w-48 h-48 -bottom-12 -left-12 z-30" viewbox="0 0 200 200">
+<rect height="40" stroke-width="2" width="40" x="80" y="80"></rect>
+<path d="M80,100 L40,100 L40,140 M120,100 L160,100 L160,60" stroke-width="2"></path>
+<circle cx="40" cy="140" fill="#0035c5" r="4"></circle>
+<circle cx="160" cy="60" fill="#0035c5" r="4"></circle>
+</svg>
+</div>
+</section>
+<!-- Project Spotlight: Terrasur -->
+<section class="bg-surface-container-low border-y-2 border-on-background py-32 px-margin-mobile md:px-margin-desktop relative overflow-hidden">
+<div class="max-w-max-width mx-auto">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1 relative">
+<div class="brutalist-border bg-white shadow-[8px_8px_0px_0px_rgba(25,28,29,1)]">
+<img alt="Terrasur Sensor" class="w-full aspect-[4/3] object-cover" data-alt="A close-up shot of an advanced soil sensor device called Terrasur, partially embedded in a lush green garden setting. The sensor features a sleek, durable casing with glowing electric blue indicators. Soft morning sunlight filters through the surrounding leaves, creating an organic yet technological atmosphere. The focus is sharp on the device's hardware, contrasting with the soft, natural background. The aesthetic is clean, minimalist, and high-tech." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZyX0act0XqlvIfLUKC7FYRh3Q2CZMshEMTf6iHTo6EanLgG_e9fktMUdiiQ10pHyTbixky8KxS0vSJf7zu0nhjmkW8zoknNCkIq8rVpjRp-md4-xzKDFbAP5mTPleELYuKnk4bco1FUthGmyOmVh6ZI8acAqo5vVKIvEQrtgRYPagIjto8SqZIGyiKFjmzKz07lK8XDGS3_hEjOLSmtCkbluWGVSR21F0Fch4RJXzMdhIVwOJWfg4CIIRkBrCRPIQqWRB5z7YD3c"/>
+</div>
+<!-- Leaf Doodle -->
+<svg class="doodle doodle-blue w-24 h-24 -top-8 -right-8" viewbox="0 0 100 100">
+<path d="M10,90 Q50,90 90,10 Q50,10 10,90 Z"></path>
+<path d="M10,90 L90,10"></path>
+<path d="M30,70 L40,50 M50,50 L60,30"></path>
+</svg>
+</div>
+<div class="order-1 md:order-2 space-y-6">
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">sensors</span>
+                            FEATURED PROJECT
+                        </span>
+<h2 class="font-headline-lg text-headline-lg text-on-background">PROJECT SPOTLIGHT: <span class="text-primary">TERRASUR</span></h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            A revolutionary multi-strata soil monitoring system designed for precision agriculture. Terrasur utilizes real-time chemical analysis and IoT connectivity to optimize crop yield while reducing water waste by up to 40%.
+                        </p>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 brutalist-border bg-white">
+<span class="material-symbols-outlined text-primary mb-2">bolt</span>
+<p class="font-bold">Zero Latency</p>
+<p class="text-sm opacity-70">Real-time data streaming</p>
+</div>
+<div class="p-4 brutalist-border bg-white">
+<span class="material-symbols-outlined text-primary mb-2">eco</span>
+<p class="font-bold">Eco-Integrated</p>
+<p class="text-sm opacity-70">Biodegradable housing</p>
+</div>
+</div>
+<button class="flex items-center gap-2 font-bold group">
+                            LEARN MORE ABOUT TERRASUR
+                            <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Meet the Team -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg mb-4">THE MINDS BEHIND <span class="text-primary">ARCAN</span></h2>
+<p class="text-on-secondary-container">Meet the multidisciplinary team of engineers, designers, and visionaries pushing the boundaries at HackOmation.</p>
+</div>
+<!-- Lightbulb Doodle -->
+<svg class="doodle w-16 h-16 mb-4" viewbox="0 0 100 100">
+<path d="M30,40 C30,20 70,20 70,40 C70,60 55,60 55,80 L45,80 C45,60 30,60 30,40"></path>
+<line x1="45" x2="55" y1="85" y2="85"></line>
+<line x1="45" x2="55" y1="90" y2="90"></line>
+<path class="doodle-blue" d="M50,15 L50,5 M75,25 L82,18 M25,25 L18,18" stroke-width="1.5"></path>
+</svg>
+</div>
+<!-- Bento Grid Team Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Member 1 -->
+<div class="md:col-span-4 brutalist-border p-6 bg-white hover:-translate-y-2 hover:shadow-[8px_8px_0px_0px_rgba(0,53,197,1)] transition-all">
+<div class="aspect-square bg-surface-variant mb-6 brutalist-border overflow-hidden">
+<img alt="Team Member" class="w-full h-full object-cover grayscale" data-alt="A professional headshot of a young male engineer with a creative and confident expression. He is wearing casual tech-wear, and the background is a clean, neutral studio setting. The lighting is high-key and soft, fitting a modern tech startup's visual identity. The image is rendered with a slight high-contrast effect to match a professional design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFG8__Q84mQOXlrvKVcPdSJW01-o1QyykZbV7YoDte57k2mIwRaiGtoVd-TmkOQLlC6YXzlz-amRGZPjTQrelr6v_-tfoG8W6vx5voWf9Tkjt1MXir_7kBKCZQNXzsGuG--2qhmjYE5UsxkwtgDmg0_fI1kR4Ra1uitNKPtdZ-p_UmML00Hmp3MAYhCEPUf-c0YxB0wYCJAfSoGmxf_bsCS8zKsEKSEAknhX7uyh9OqkRCqdwfRMt9DM1GfvB-cEhI70KGrN5gfM0"/>
+</div>
+<h3 class="font-bold text-xl mb-1">Alex Chen</h3>
+<p class="font-label-sm text-label-sm text-primary mb-4">LEAD ARCHITECT</p>
+<p class="text-sm text-on-secondary-container">Specializing in embedded systems and sustainable hardware design.</p>
+</div>
+<!-- Member 2 -->
+<div class="md:col-span-4 brutalist-border p-6 bg-white hover:-translate-y-2 hover:shadow-[8px_8px_0px_0px_rgba(0,53,197,1)] transition-all">
+<div class="aspect-square bg-surface-variant mb-6 brutalist-border overflow-hidden">
+<img alt="Team Member" class="w-full h-full object-cover grayscale" data-alt="A professional headshot of a young female hardware designer looking forward with an innovative smile. The background is a clean, bright white space. She has a modern, professional appearance, and the lighting is crisp and bright, aligning with a high-end minimalist design aesthetic. The image is clean and high-fidelity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC7KsiX343y2AiJ5uaSClWBFflUIj3TIE8u3v0_j2pe0ZviGoFtwnj2igJMHTJJjv_wH2trl6E3e-jRhe9LkXP52IxRh4N-zRSTrnR7ABWhwq0jZONIOoTrbdZjWt77fu1kR7H91aQJ4sD_BD8SVOB7GxCk6Qg3xpcm2SQ0AZ7s5yVcZWaMQ5ogjMUlOunn3A94Z2j7Ru6nCUOQo9Ll-FB7Xv__CvipBev0m1RjxmwIcqkon8c56tfbWHB4B0l-uKXur4bchq6sMM"/>
+</div>
+<h3 class="font-bold text-xl mb-1">Maya Patel</h3>
+<p class="font-label-sm text-label-sm text-primary mb-4">UX/UI STRATEGIST</p>
+<p class="text-sm text-on-secondary-container">Focusing on human-centered design for technical interfaces.</p>
+</div>
+<!-- Member 3 -->
+<div class="md:col-span-4 brutalist-border p-6 bg-white hover:-translate-y-2 hover:shadow-[8px_8px_0px_0px_rgba(0,53,197,1)] transition-all">
+<div class="aspect-square bg-surface-variant mb-6 brutalist-border overflow-hidden">
+<img alt="Team Member" class="w-full h-full object-cover grayscale" data-alt="A sharp, modern headshot of a male software developer with a focused and creative demeanor. The background is a minimalist grey, and the lighting is soft yet professional. The subject has a clean-cut look, fitting for a tech-focused innovator. The overall visual style is polished and high-quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3GD7poY1CBAtXcAXhPsyGfwKfG-5QCZHOHVISbKi4pebac0OcS4TiYiX8qpbLNEOLZPjSWxzxD_RNyX3zO2CIdmeHwSDT0BStvh4fhyVkeQ53ObEvE0xRHdwtq1naiSDigMIt1TZi5qUitGE0Aha7Zghtsj96EEtemt3B0mN55P1Wo0yjvjympUwCWTrNNTol5EsoIY6qTLzjrzVOq56maNJb1PCL0hKldx3ShYvVM0LJuIIOwJ1hPpEvctgO2H0GxweBtWvK3PY"/>
+</div>
+<h3 class="font-bold text-xl mb-1">Jordan Lee</h3>
+<p class="font-label-sm text-label-sm text-primary mb-4">SYSTEMS ENGINEER</p>
+<p class="text-sm text-on-secondary-container">Expert in real-time processing and complex data visualization.</p>
+</div>
+<!-- Member 4 -->
+<div class="md:col-span-6 brutalist-border p-6 bg-white hover:-translate-y-2 hover:shadow-[8px_8px_0px_0px_rgba(0,53,197,1)] transition-all flex flex-col md:flex-row gap-6">
+<div class="w-full md:w-1/2 aspect-square bg-surface-variant brutalist-border overflow-hidden">
+<img alt="Team Member" class="w-full h-full object-cover grayscale" data-alt="A bright headshot of a female data scientist with an energetic and friendly expression. She is in a modern office setting with lots of natural light. The photograph is high-resolution, featuring a professional and polished tech-startup aesthetic with clean lines and soft lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsCdh2-_Fxt3UQBsabExLKDT70eWVZwLBspFDxoX2RCkanMlM1nBlUkobM18G_K315jSnRKC9Rmy-rFgimClIniJSRYcrE24hgb2wfTDWhurxpSzg1y_NIaJRspibb8i5NvzBhrJlpTQF1YpMgoU5q-fV4QMsCs9LV3d61yVvaBW4s5XWkYVLEqvV9YhLVRmNgYxikrFaVdgugCTUe6NVqm4lwRKsznE8Yk2lXy7Yw8IN1Zng6YvUZkUdhpRoOUsKzRc_r4_4k8yw"/>
+</div>
+<div class="flex flex-col justify-center">
+<h3 class="font-bold text-xl mb-1">Sarah Smith</h3>
+<p class="font-label-sm text-label-sm text-primary mb-4">DATA ANALYST</p>
+<p class="text-sm text-on-secondary-container">Transforming raw sensor output into actionable ecological insights.</p>
+</div>
+</div>
+<!-- Member 5 -->
+<div class="md:col-span-6 brutalist-border p-6 bg-white hover:-translate-y-2 hover:shadow-[8px_8px_0px_0px_rgba(0,53,197,1)] transition-all flex flex-col md:flex-row gap-6">
+<div class="w-full md:w-1/2 aspect-square bg-surface-variant brutalist-border overflow-hidden">
+<img alt="Team Member" class="w-full h-full object-cover grayscale" data-alt="A professional headshot of a male robotics engineer with a smart and forward-thinking look. The background is a minimalist white environment, and the lighting is high-key, creating a clean and professional appearance. The image quality is high, reflecting a sophisticated engineering team member." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApYIsfccWpkiaJA7cQHbUJf2Vd0F_a9PS5_EkdyjV2pTS9ytNI0u-IbgCn8QUGNmHAQ2wvEWoJ8fO3RyQt5-wZ-lkT2BZaIqRwjZKvzqkFo38m26xJkHWvtno7C33uXl5bzl_tdFOy37h95ixyOWCbuuKa-55CIbr4xOBbqVlyn0JV3J6kH3V3_lOPOJ-All_nwJCxbW_xhPpdrmtn3t4ars9u_Q3bTTdXHYC5VgJqzh_tFwj-PKAhHvvb5fqepKjce_VxOxL5g2I"/>
+</div>
+<div class="flex flex-col justify-center">
+<h3 class="font-bold text-xl mb-1">Liam Wang</h3>
+<p class="font-label-sm text-label-sm text-primary mb-4">ROBOTICS LEAD</p>
+<p class="text-sm text-on-secondary-container">Pioneering autonomous deployment systems for environmental sensors.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop text-center relative">
+<!-- Decorative circuit lines -->
+<svg class="doodle w-full h-24 top-0 left-0" preserveaspectratio="none" viewbox="0 0 1000 100">
+<path class="doodle-blue" d="M0,50 L200,50 L250,20 L750,20 L800,80 L1000,80" opacity="0.3"></path>
+</svg>
+<div class="max-w-3xl mx-auto space-y-8">
+<h2 class="font-headline-xl text-headline-xl">READY TO <span class="text-primary">BUILD?</span></h2>
+<p class="text-lg">We are always looking for collaborators, mentors, and fellow enthusiasts to join our mission at HackOmation. Let's engineer something remarkable.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4 pt-8">
+<input class="brutalist-border px-6 py-4 focus:ring-4 focus:ring-primary/20 outline-none w-full sm:w-80" placeholder="Enter your email" type="email"/>
+<button class="bg-primary text-white border-2 border-on-background px-8 py-4 font-bold hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(25,28,29,1)] transition-all">
+                        Get Started
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter bg-surface-container-highest dark:bg-inverse-surface border-t-2 border-on-surface dark:border-outline flat no shadows">
+<div class="flex flex-col gap-4">
+<div class="font-headline-lg text-headline-lg font-bold text-on-surface dark:text-surface-bright">ARCAN</div>
+<p class="font-body-md text-body-md uppercase tracking-widest text-on-secondary-container dark:text-surface-variant">© 2024 ARCAN. Built with passion for HackOmation.</p>
+</div>
+<nav class="flex gap-gutter">
+<a class="font-body-md text-body-md uppercase tracking-widest text-primary underline transition-colors duration-200" href="#">Mission</a>
+<a class="font-body-md text-body-md uppercase tracking-widest text-on-secondary-container dark:text-surface-variant hover:text-primary dark:hover:text-tertiary-fixed-dim transition-colors duration-200 cursor-pointer" href="#">Team</a>
+<a class="font-body-md text-body-md uppercase tracking-widest text-on-secondary-container dark:text-surface-variant hover:text-primary dark:hover:text-tertiary-fixed-dim transition-colors duration-200 cursor-pointer" href="#">Project Spotlight</a>
+<a class="font-body-md text-body-md uppercase tracking-widest text-on-secondary-container dark:text-surface-variant hover:text-primary dark:hover:text-tertiary-fixed-dim transition-colors duration-200 cursor-pointer" href="#">Contact</a>
+</nav>
+</footer>
+</body></html>
